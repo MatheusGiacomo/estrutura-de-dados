@@ -34,7 +34,8 @@ int main() {
     // campo usa a seta e nao o ponto.
     // --------------------------------------------------------
 
-    // escreva aqui
+    No* primeiro = new No;
+    primeiro->valor = 10;
 
 
     // --------------------------------------------------------
@@ -43,7 +44,11 @@ int main() {
     // e o terceiro no, com o valor 30.
     // --------------------------------------------------------
 
-    // escreva aqui
+    No* segundo = new No;
+    segundo->valor = 20;
+
+    No* terceiro = new No;
+    terceiro->valor = 30;
 
 
     // --------------------------------------------------------
@@ -58,7 +63,9 @@ int main() {
     // e o ultimo da lista.
     // --------------------------------------------------------
 
-    // escreva aqui
+    primeiro->proximo = segundo;
+    segundo->proximo = terceiro;
+    terceiro->proximo = nullptr;
 
 
     // --------------------------------------------------------
@@ -67,7 +74,7 @@ int main() {
     // o primeiro no. Esse ponteiro vai caminhar pela lista.
     // --------------------------------------------------------
 
-    // escreva aqui
+    No* atual = primeiro;
 
 
     // --------------------------------------------------------
@@ -84,7 +91,10 @@ int main() {
     // e o nullptr do ultimo no.
     // --------------------------------------------------------
 
-    // escreva aqui
+    while (atual != nullptr) {
+        cout << atual->valor << " ";
+        atual = atual->proximo;
+    }
 
 
     return 0;

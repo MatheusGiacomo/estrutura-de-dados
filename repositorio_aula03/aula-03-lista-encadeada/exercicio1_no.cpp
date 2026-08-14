@@ -29,7 +29,10 @@ using namespace std;
 // a struct.
 // ------------------------------------------------------------
 
-// escreva a struct aqui
+struct No{
+    int valor;
+    No* proximo;
+};
 
 
 int main() {
@@ -40,7 +43,7 @@ int main() {
     // Aqui ela e uma variavel comum, nao um ponteiro.
     // --------------------------------------------------------
 
-    // escreva aqui
+    No primeiro;
 
 
     // --------------------------------------------------------
@@ -50,7 +53,7 @@ int main() {
     // e feito com ponto.
     // --------------------------------------------------------
 
-    // escreva aqui
+    primeiro.valor = 10;
 
 
     // --------------------------------------------------------
@@ -60,7 +63,7 @@ int main() {
     // dele e vazio.
     // --------------------------------------------------------
 
-    // escreva aqui
+    primeiro.proximo = nullptr;
 
 
     // --------------------------------------------------------
@@ -68,7 +71,7 @@ int main() {
     // Imprima o valor guardado no no primeiro, usando cout.
     // --------------------------------------------------------
 
-    // escreva aqui
+    cout << primeiro.valor << endl;
 
 
     return 0;
