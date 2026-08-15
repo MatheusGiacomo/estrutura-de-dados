@@ -1,7 +1,7 @@
-// ============================================================
+// =============================================================
 // Exercicio 4 - Lista circular
 // Estrutura de Dados - IFSP Campus Campos do Jordao
-// ============================================================
+// =============================================================
 //
 // Objetivo: fechar o ciclo, fazendo o ultimo no apontar de volta
 // para o primeiro, e percorrer dando exatamente uma volta.
@@ -10,7 +10,7 @@
 // 10 20 30
 //
 // Compile com:  g++ exercicio4_circular.cpp -o exercicio4 && ./exercicio4
-// ============================================================
+// =============================================================
 
 #include <iostream>
 using namespace std;
