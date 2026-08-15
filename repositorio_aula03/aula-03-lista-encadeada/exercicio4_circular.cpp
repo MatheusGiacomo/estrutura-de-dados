@@ -28,7 +28,14 @@ int main() {
     // em ponteiros chamados primeiro, segundo e terceiro.
     // --------------------------------------------------------
 
-    // escreva aqui
+    No* primeiro = new No;
+    primeiro->valor = 10;
+
+    No* segundo = new No;
+    segundo->valor = 20;
+
+    No* terceiro = new No;
+    terceiro->valor = 30;
 
 
     // --------------------------------------------------------
@@ -37,7 +44,8 @@ int main() {
     // como voce ja fez no exercicio 2.
     // --------------------------------------------------------
 
-    // escreva aqui
+    primeiro->proximo = segundo;
+    segundo->proximo = terceiro;
 
 
     // --------------------------------------------------------
@@ -48,7 +56,7 @@ int main() {
     // A lista passa a nao ter fim.
     // --------------------------------------------------------
 
-    // escreva aqui
+    terceiro->proximo = primeiro;
 
 
     // --------------------------------------------------------
@@ -72,7 +80,11 @@ int main() {
     // que ele fica no fim e nao no comeco do laco.
     // --------------------------------------------------------
 
-    // escreva aqui
+    No* atual = primeiro;
+    do {
+        cout << atual->valor << " ";
+        atual = atual->proximo;
+    } while (atual != primeiro);
 
 
     return 0;
