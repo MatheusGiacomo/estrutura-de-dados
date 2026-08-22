@@ -38,7 +38,8 @@ struct Pilha {
 
 void push(Pilha& pilha, int valor) {
 
-    // escreva aqui
+    pilha.itens[pilha.topo] = valor;
+    pilha.topo = pilha.topo + 1;
 
 }
 
@@ -53,7 +54,7 @@ void push(Pilha& pilha, int valor) {
 
 void pop(Pilha& pilha) {
 
-    // escreva aqui
+    pilha.topo = pilha.topo - 1;
 
 }
 
@@ -68,9 +69,7 @@ void pop(Pilha& pilha) {
 
 int top(Pilha& pilha) {
 
-    // escreva aqui
-
-    return 0; // troque este retorno
+    return pilha.itens[pilha.topo - 1];
 }
 
 // ------------------------------------------------------------
@@ -82,10 +81,7 @@ int top(Pilha& pilha) {
 // ------------------------------------------------------------
 
 bool isEmpty(Pilha& pilha) {
-
-    // escreva aqui
-
-    return true; // troque este retorno
+    return pilha.topo == 0;
 }
 
 int main() {
@@ -98,7 +94,7 @@ int main() {
     // Faca isso antes do primeiro push.
     // --------------------------------------------------------
 
-    // escreva aqui
+    pilha.topo = 0;
 
 
     // --------------------------------------------------------
@@ -108,7 +104,9 @@ int main() {
     // Modelo:  push(pilha, 10);
     // --------------------------------------------------------
 
-    // escreva aqui
+    push(pilha, 10);
+    push(pilha, 20);
+    push(pilha, 30);
 
 
     // --------------------------------------------------------
@@ -122,8 +120,11 @@ int main() {
     // Modelo do laco:  while (!isEmpty(pilha)) { ... }
     // --------------------------------------------------------
 
-    // escreva aqui
+    while(!isEmpty(pilha)){
+        cout << top(pilha) << " ";
+        pop(pilha);
 
+    }
 
     cout << endl;
     return 0;

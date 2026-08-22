@@ -39,14 +39,17 @@ int main() {
     // PASSO 1
     // Insira os clientes na ordem de chegada listada acima.
     //
-    // Cliente comum entra no fim:          push_back
+    // Cliente comum entra no fim:         push_back
     // Cliente prioritario entra na frente: push_front
     //
     // Faca uma linha para cada cliente, na ordem de chegada.
     // --------------------------------------------------------
 
-    // escreva aqui
-
+    atendimento.push_back("Ana");      // comum
+    atendimento.push_back("Bruno");    // comum
+    atendimento.push_front("Carla");   // prioritária (passa na frente da Ana e do Bruno)
+    atendimento.push_back("Diego");    // comum
+    atendimento.push_front("Elena");   // prioritária (passa na frente da Carla)
 
     // --------------------------------------------------------
     // PASSO 2
@@ -59,8 +62,10 @@ int main() {
     //   2. remova quem foi atendido, com pop_front
     // --------------------------------------------------------
 
-    // escreva aqui
-
+    while (!atendimento.empty()) {
+        cout << "Atendendo: " << atendimento.front() << endl;
+        atendimento.pop_front();
+    }
 
     return 0;
 }

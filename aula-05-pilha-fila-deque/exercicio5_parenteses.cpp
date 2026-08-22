@@ -26,25 +26,25 @@ using namespace std;
 //
 // Ela recebe uma string e devolve true se os parenteses
 // estiverem corretamente fechados.
-//
-// Dentro dela:
-//   1. declare uma stack<char> chamada pilha
-//   2. percorra a string caractere a caractere, com
-//      for (char c : expressao) { ... }
-//   3. se o caractere for abre parenteses, empilhe ele
-//   4. se for fecha parenteses:
-//        se a pilha estiver vazia, devolva false, porque
-//        apareceu um fechamento sem abertura correspondente
-//        caso contrario, desempilhe
-//   5. no fim, devolva true apenas se a pilha estiver vazia.
-//      Se sobrou algo, faltou fechar.
 // ------------------------------------------------------------
 
 bool verificar(string expressao) {
+    stack<char> pilha;
 
-    // escreva aqui
+    for (char c : expressao) {
+        if (c == '(') {
+            pilha.push(c);
+        } else if (c == ')') {
+            if (pilha.empty()) {
+                return false; // apareceu um fechamento sem abertura
+            } else {
+                pilha.pop(); // encontrou o par correspondente
+            }
+        }
+    }
 
-    return false; // troque este retorno
+    // Se a pilha estiver vazia, todos foram fechados corretamente
+    return pilha.empty();
 }
 
 int main() {
@@ -56,13 +56,10 @@ int main() {
     // PASSO 2
     // Chame verificar para cada expressao e imprima o resultado
     // no formato da saida esperada.
-    //
-    // Dica: use o operador ternario para escolher entre as
-    // palavras correto e incorreto.
     // --------------------------------------------------------
 
-    // escreva aqui
-
+    cout << correta << " -> " << (verificar(correta) ? "correto" : "incorreto") << endl;
+    cout << incorreta << " -> " << (verificar(incorreta) ? "correto" : "incorreto") << endl;
 
     return 0;
 }

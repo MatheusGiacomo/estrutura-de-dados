@@ -1,3 +1,4 @@
+
 // ============================================================
 // Exercicio 4 - As mesmas estruturas com a STL
 // Estrutura de Dados - IFSP Campus Campos do Jordao
@@ -22,42 +23,34 @@ int main() {
     // --------------------------------------------------------
     // PASSO 1
     // Declare uma pilha de inteiros e empilhe 10, 20 e 30.
-    //
-    // Modelo:  stack<int> pilha;
-    //          pilha.push(10);
-    //
-    // Repare que aqui o push ja vem pronto, nao e preciso
-    // escrever a funcao.
     // --------------------------------------------------------
 
-    // escreva aqui
-
+    stack<int> pilha;
+    pilha.push(10);
+    pilha.push(20);
+    pilha.push(30);
 
     // --------------------------------------------------------
     // PASSO 2
     // Esvazie a pilha imprimindo cada valor.
-    //
-    // O que voce chamou de isEmpty aqui se chama empty.
-    // O top e o pop tem os mesmos nomes que voce usou.
     // --------------------------------------------------------
 
-    // escreva aqui
-
+    while (!pilha.empty()) {
+        cout << pilha.top() << " ";
+        pilha.pop();
+    }
 
     cout << endl;
 
     // --------------------------------------------------------
     // PASSO 3
     // Declare uma fila de inteiros e enfileire 10, 20 e 30.
-    //
-    // Modelo:  queue<int> fila;
-    //
-    // Atencao: na queue a insercao tambem se chama push, e nao
-    // enqueue.
     // --------------------------------------------------------
 
-    // escreva aqui
-
+    queue<int> fila;
+    fila.push(10);
+    fila.push(20);
+    fila.push(30);
 
     // --------------------------------------------------------
     // PASSO 4
@@ -65,8 +58,10 @@ int main() {
     // Para ler o primeiro, use front.
     // --------------------------------------------------------
 
-    // escreva aqui
-
+    while (!fila.empty()) {
+        cout << fila.front() << " ";
+        fila.pop();
+    }
 
     cout << endl;
     return 0;

@@ -27,7 +27,8 @@ int main() {
     // posicoes, e uma variavel quantidade valendo zero.
     // --------------------------------------------------------
 
-    // escreva aqui
+    int itens[TAMANHO];
+    int quantidade = 0;
 
 
     // --------------------------------------------------------
@@ -42,7 +43,8 @@ int main() {
     //     quantidade = quantidade + 1;
     // --------------------------------------------------------
 
-    // escreva aqui
+    itens[quantidade] = 10;
+    quantidade = quantidade + 1;
 
 
     // --------------------------------------------------------
@@ -50,7 +52,11 @@ int main() {
     // Repita para inserir os valores 20 e 30.
     // --------------------------------------------------------
 
-    // escreva aqui
+    itens[quantidade] = 20;
+    quantidade = quantidade + 1;
+
+    itens[quantidade] = 30;
+    quantidade = quantidade + 1;
 
 
     // --------------------------------------------------------
@@ -63,7 +69,7 @@ int main() {
     // um.
     // --------------------------------------------------------
 
-    // escreva aqui
+    cout << quantidade << " " << itens[quantidade - 1];
 
 
     cout << endl;
